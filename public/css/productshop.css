@@ -1,0 +1,36 @@
+body{
+    margin:0;padding:0;  
+}
+/* header css样式 开始 */
+
+header div .breadcrumb{
+  background: rgba(0,0,0,0);  
+}
+/* 修改面包屑导航 / 号 */
+.breadcrumb-item + .breadcrumb-item::before{
+  content:"|";
+}
+/* 991px 以下 位于右上角*/
+@media screen and (max-width:991px){
+   header div .breadcrumb{
+    width: 210px;
+    height: 50px;
+    margin: -110px 57%;
+   }
+}
+/* header css样式 结束 */
+.my_gray{
+  background: linear-gradient(to bottom,#fff,#f0f0f0);
+}
+.my_input_width{
+  width:10px;
+  border:0;outline: 0;
+}
+
+.input-group-text{ width: 40%; }
+.my_btn_gray{
+    width:1.5rem;
+    height: 2rem;
+    background: linear-gradient(to bottom,#e0e0e0,#666);
+}
+.my_input_w{ width: 5rem;}

@@ -1,0 +1,9 @@
+footer{
+  background:rgba(0,0,0,0.8);
+  color: #fff;    
+  width:1500px;
+  height:145px;   
+  margin:0 auto; 
+  text-align: center; 
+  line-height:36px; 
+}

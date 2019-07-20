@@ -1,0 +1,355 @@
+/* 主体 .containe */
+html,body,.container{ 
+    width:100%;
+    height:100%; 
+}
+/*头 header */
+header{ 
+    background:rgba(0,0,0,0.8);
+    color: #fff;    
+}
+header{  
+    width:1500px; 
+    height:50px;
+    margin:0 auto; 
+}
+/* 头-左-logo .logo_header*/
+.logo_header{
+    width:300px;
+    height:50px; 
+    line-height:50px;
+    font:47px Colonna MT;
+    text-align: center;
+}
+.logo_header a{
+    color:#fff; 
+    text-shadow:0 0 20px #fff;
+}
+/*导航 tabs*/
+.tabs{
+    width:1200px;
+    height:50px;
+    line-height:50px;
+    margin:-50px 0 0 250px;
+}
+#tab li{ 
+   float: left; 
+   cursor:pointer;
+   text-align: center;
+   position: relative;
+}
+#tab li a{
+    margin:0px 80px;
+}
+#tab li ul li{
+    float:none;
+}
+/*二级ul使用绝对定位，宽度大于一级菜单时，才不会撑大一级*/
+#tab li ul{
+    display: none;
+    position: absolute;
+    z-index:1000;
+}
+/*标签 hover 点击效果*/
+#tab li ul li a:link,#tab li ul li:visited{  
+    margin:0;
+    width:180px;
+    height:40px;
+    line-height:40px;
+    display: block;
+    color:#fff;
+    background:rgba(0,0,0,0.4);  
+}
+#tab li:hover{
+    background:#369;  
+}
+#tab li a:hover{
+    text-shadow: 0 0 5px #fff;
+}
+#tab li ul li:hover{
+    background:rgba(0,0,0,0.8);  
+}
+/* 购物车 .car_header 
+.car_header{
+    width:300px;
+    height:50px;
+    float: right;
+    text-align: center;
+}
+.car_header img{
+    width:40px;
+    margin:5px 0px;
+    border-radius: 50%; 
+}
+.car_header img:hover{
+    cursor: pointer;
+    background:rgba(0,0,0,0.1); 
+    box-shadow:0 0 20px #fff;
+}*/
+
+/*主体 .content*/
+.content{
+    width:1200px;
+    height:2000px;
+    position: relative;
+    left:0px;
+    margin:0 auto;   
+}
+#content1,#content2,#content3,#content4,#content5{
+    width:1200px;
+    height:2000px;
+    position:absolute;
+    top:0px; 
+    left:0px; 
+    color:#111;
+    background-color:#fff;  
+}
+/*首页内容 .content1*/
+/*轮播图 .banners .wrap*/
+/* 我们为了让图片只在banners中，所以需要限定其宽度和高度并且使用overflow:hidden；将其余的图片隐藏起来，并且我们希望wrap相对于container左右移动，所以设置为relative */
+.banners{ 
+    width:900px;
+    height:375px; 
+    margin:0 auto; 
+    position:relative;
+    top:100px;
+    overflow:hidden;
+}
+/*我们设置wrap是绝对定位的，所以,我们就可以通过控制Left和Right来控制图片的移动了。设置z-index:1;以对后面将要放置的buttons作为参考。 因为共有七张图片，所以width为4500px（每张图片我们设置为900X375）,我们只需让图片左浮动即可实现占满一排了。 */
+.wrap{ 
+    width:4500px; 
+    height:375px; 
+    position: absolute; 
+    /*z-index:1;*/ 
+}
+.banners .wrap img{  
+    width:900px; 
+    height:375px; 
+    float:left;
+}
+/*按钮 buttons*/
+/* 然后我们把显示次序的buttons放在图片的右下角。并且设置z-index:2;以保证buttons是在图片的上面的。 */
+/*.banners .buttons{
+     width:150px;
+     height:10px;
+     position: absolute;
+     left:30px;
+     bottom:20px;
+     z-index:2;
+}*/ 
+/* 然后将buttons下面的span做一个简单的修饰，并且给和图片对应的span设置一个on类 */
+/* .banners .buttons span{ 
+    width:5px;
+    height:5px;
+    background: rgba(0,0,0,0.3);
+    display:inline-block;
+}
+.banners .buttons span.on{ 
+    background-color:#111;
+    color: #fff;
+} */
+/* 接下来，我们把左右切换的箭头加上，然后做简单的修饰，注意：因为这里使用实体来表示左右箭头，所以设置font-size才能改变其大小 */
+.banners .arrow{ 
+    position: absolute; 
+    top:40%; 
+    display: none; 
+    color: #369; 
+    padding: 0px 14px;
+    border-radius: 50%; 
+    font-size:50px; 
+    /*z-index:2;*/ 
+}
+.banners .arrow_left{ 
+    left:10px; 
+}
+.banners .arrow_right{ 
+    right:10px; 
+}
+.banners:hover .arrow{ 
+    display: block; 
+}
+.banners .arrow:hover{ 
+    background:rgba(0,0,0,0.3); 
+    cursor: pointer;
+}
+
+/* 产品展示 .products  */
+.products{ 
+    width: 900px;
+    height:150px; 
+    margin:0 auto;
+    position:relative;
+    top:200px;
+    /*z-index: 1;*/
+}
+/* 标头-产品系列 .profonts */
+.profonts{
+    width:900px;
+    height:62;
+    text-align:center; 
+}
+.profonts p{ 
+    font-size:30px;
+}
+.profonts p span{ 
+    font-size:10px; 
+    color: #666; 
+}
+.proimgs{
+    margin:0px 50px 0px 65px; 
+    float:left;
+    text-align:center;  
+    position: relative;
+    top:50px;
+}
+.proimgs p{
+    background:rgba(211, 162, 162, 0.3); 
+    border-radius:10px;
+    font-size:14px;
+}
+.proimgs p:hover{ 
+     background:rgba(162, 201, 211, 0.3);
+     font-size:15px;   
+     cursor: pointer;
+}
+/*推荐图片 .pictures*/
+.pictures{ 
+    width: 900px;
+    height:1062px;
+    margin:0 auto;
+    position:relative;
+    top:300px; 
+}
+/*4个图片 .picfour*/
+.picfour{  
+    width:900px;
+    height:1000px;
+    position: relative;
+    top:50px;
+}
+.picfour span{
+    color:#fff;
+    font-size: 20px;
+}
+.pic1{
+    float: left;
+    width:300px;
+    height:600px;
+}
+.pic2{
+    float: left;
+    width:600px;
+    height:400px;
+    overflow: hidden;
+}
+.pic3{
+    width:300px;
+    height:400px;
+}
+.pic4{
+    float:right;
+    width:600px;
+    height:600px;
+}
+ .pic1,.pic2,.pic3,.pic4:hover{
+    cursor: pointer;
+}
+.pic1 img:hover,.pic2 img:hover,.pic3 img:hover,.pic4 img:hover{
+    margin:10px 0 0 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px#111;
+}
+ .pic1 img:hover{
+    width:280px;
+    height:580px;
+}
+.pic2 img:hover{
+    width:580px;
+    height:380px;
+}
+.pic3 img:hover{
+    width:280px;
+    height:380px;
+}
+.pic4 img:hover{
+    width:580px;
+    height:580px;
+} 
+
+
+
+/*产品展示 #conten2*/
+.cont2pic1{
+    width:1200px;
+    height:850px;
+    position: relative;
+    overflow: hidden;
+}
+.cont2pic2{
+    width:1200px;
+    height:500px;
+    position: relative;
+}
+.cont2left,.cont2right{ 
+    width:600px;
+    float: left;
+}
+.cont2pic3{
+    width:1200px;
+    height:500px;   
+    position: relative;
+    top:130px;
+}
+
+.cont2left img,.cont2right img{
+    width:600px;
+}
+/* .cont2pic1 img:hover,.cont2pic2 img:hover,.cont2pic3 img:hover{
+    cursor: pointer;
+} */
+
+/* 产品中心content3 */
+.cont3top{
+    width: 1200px;
+    height: 1030px;  
+    margin-top:100px;
+}
+.cont3top1{
+    width: 1200px;
+    height: 800px;
+    margin-top:100px;
+}
+
+.cont3top2{
+    width:600px;
+    height:350px;
+    text-align: center;
+    float: left;
+}
+.cont3top2 img{
+    width: 300px;
+    height:276px;
+}
+.cont3top2 img:hover{
+    width: 324px;
+    height:300px;
+}
+
+/*加入我们 content4*/
+.cont4top1{
+    width:1200px;
+    height:1770px;
+    text-align: center;
+}
+.cont4top2{
+    width:1200px;
+    height:200px;
+    text-align: center;
+    margin-top:30px;
+}
+.cont4top2 img{
+    width:300px;
+    border-radius: 50%;
+}
+
+
